@@ -112,7 +112,7 @@ public class OutdoorEnthusiastTests  {
         driver.findElement(By.id("add-fishing")).click();
         //Click on the fishing button
         driver.findElement(By.cssSelector("a[href*='fishing-weather']")).click();
-        //Assert that we are at the golf forecast page
+        //Assert that we are at the fishing forecast page
         assert(driver.getTitle().contains("Fishing Weather"));
   }
   
@@ -150,15 +150,15 @@ public class OutdoorEnthusiastTests  {
   public void CheckHiking() throws Exception {
         //Open Home Page
         driver.get("http://www.accuweather.com");
-        //Find the add ski to interests button in dropdown menu
+        //Find the add hiking to interests button in dropdown menu
         WebElement addNewInterest = driver.findElement(By.id("add-new-interest"));
         Actions builder = new Actions(driver);
         builder.moveToElement( addNewInterest );    
         builder.perform();   
         driver.findElement(By.id("add-hiking")).click();
-        //Click on the golf button
+        //Click on the hiking button
         driver.findElement(By.cssSelector("a[href*='hiking-weather']")).click();
-        //Assert that we are at the golf forecast page
+        //Assert that we are at the hiking forecast page
         assert(driver.getTitle().contains("Hiking Weather"));
   }
   
@@ -181,9 +181,56 @@ public class OutdoorEnthusiastTests  {
         driver.findElement(By.id("add-biking")).click();
         //Click on the biking button
         driver.findElement(By.cssSelector("a[href*='biking-weather']")).click();
-        //Assert that we are at the golf forecast page
+        //Assert that we are at the biking forecast page
         assert(driver.getTitle().contains("Biking Weather"));
   }
+  
+  /*
+   * Scenario: Check the beach and pool forecast
+   * Given an accuweather home page without sun and sand as an interest tab
+   * When the user attempts to add a sun and san tab
+   * Then the sun and sand tab should be added to interests
+   * And the user should be able to click it to navigate to the sun and sand forecast
+   */
+  @Test
+  public void CheckSunSand() throws Exception {
+        //Open Home Page
+        driver.get("http://www.accuweather.com");
+        //Find the add sun and sand to interests button in dropdown menu
+        WebElement addNewInterest = driver.findElement(By.id("add-new-interest"));
+        Actions builder = new Actions(driver);
+        builder.moveToElement( addNewInterest );    
+        builder.perform();   
+        driver.findElement(By.id("add-sun-sand")).click();
+        //Click on the sun and sand button
+        driver.findElement(By.cssSelector("a[href*='sun-sand-weather']")).click();
+        //Assert that we are at the beach forecast page
+        assert(driver.getTitle().contains("Sun and Sand Weather"));
+  }
+  
+  /*
+   * Scenario: Check the sailing forecast
+   * Given an accuweather home page without sailing as an interest tab
+   * When the user attempts to add a sailing tab
+   * Then the sailing tab should be added to interests
+   * And the user should be able to click it to navigate to the sailing forecast
+   */
+  @Test
+  public void CheckSailing() throws Exception {
+        //Open Home Page
+        driver.get("http://www.accuweather.com");
+        //Find the add biking to interests button in dropdown menu
+        WebElement addNewInterest = driver.findElement(By.id("add-new-interest"));
+        Actions builder = new Actions(driver);
+        builder.moveToElement( addNewInterest );    
+        builder.perform();   
+        driver.findElement(By.id("add-sailing")).click();
+        //Click on the sailing button
+        driver.findElement(By.cssSelector("a[href*='sailing-weather']")).click();
+        //Assert that we are at the sailing forecast page
+        assert(driver.getTitle().contains("Sailing Weather"));
+  }
+  
   @After
   public void tearDown() throws Exception {
     driver.quit();
