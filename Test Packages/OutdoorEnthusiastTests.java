@@ -64,10 +64,33 @@ public class OutdoorEnthusiastTests  {
         builder.moveToElement( addNewInterest );    
         builder.perform();   
         driver.findElement(By.id("add-ski")).click();
-        //Click on the golf button
+        //Click on the ski button
         driver.findElement(By.cssSelector("a[href*='ski-weather']")).click();
-        //Assert that we are at the golf forecast page
+        //Assert that we are at the ski forecast page
         assert(driver.getTitle().contains("Skiing Weather Forecast"));
+  }
+  
+  /*
+   * Scenario: Check the hunting forecast
+   * Given an accuweather home page without hunting as an interest tab
+   * When the user attempts to add a hunting tab
+   * Then the hunting tab should be added to interests
+   * And the user should be able to click it to navigate to the hunting forecast
+   */
+  @Test
+  public void CheckHunting() throws Exception {
+        //Open Home Page
+        driver.get("http://www.accuweather.com");
+        //Find the add hunting to interests button in dropdown menu
+        WebElement addNewInterest = driver.findElement(By.id("add-new-interest"));
+        Actions builder = new Actions(driver);
+        builder.moveToElement( addNewInterest );    
+        builder.perform();   
+        driver.findElement(By.id("add-hunting")).click();
+        //Click on the hunting button
+        driver.findElement(By.cssSelector("a[href*='hunting-weather']")).click();
+        //Assert that we are at the hunting forecast page
+        assert(driver.getTitle().contains("Hunting Weather"));
   }
   
   @After
