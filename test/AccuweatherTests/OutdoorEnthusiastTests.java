@@ -10,6 +10,7 @@
 
 package AccuweatherTests;
 
+import static org.junit.Assert.*;
 import java.util.concurrent.TimeUnit;
 import org.junit.*;
 import org.openqa.selenium.*;
@@ -34,7 +35,7 @@ public class OutdoorEnthusiastTests  {
   
   /*
    * Scenario: Check the golf forecast
-   * Given an Accuweather home page without golf as an interest tab
+   * Given an AccuWeather home page without golf as an interest tab
    * When the user attempts to add a golf tab
    * Then the golf tab should be added to interests
    * And the user should be able to click it to navigate to the golf forecast
@@ -52,12 +53,12 @@ public class OutdoorEnthusiastTests  {
         //Click on the golf button
         driver.findElement(By.cssSelector("a[href*='golf-weather']")).click();
         //Assert that we are at the golf forecast page
-        assert(driver.getTitle().contains("Golf Weather Forecast"));
+        assertTrue(driver.getTitle().contains("Golf Weather Forecast"));
   }
   
   /*
    * Scenario: Check the ski forecast
-   * Given an Accuweather home page without ski as an interest tab
+   * Given an AccuWeather home page without ski as an interest tab
    * When the user attempts to add a ski tab
    * Then the ski tab should be added to interests
    * And the user should be able to click it to navigate to the ski forecast
@@ -75,12 +76,12 @@ public class OutdoorEnthusiastTests  {
         //Click on the ski button
         driver.findElement(By.cssSelector("a[href*='ski-weather']")).click();
         //Assert that we are at the ski forecast page
-        assert(driver.getTitle().contains("Skiing Weather Forecast"));
+        assertTrue(driver.getTitle().contains("Skiing Weather Forecast"));
   }
   
   /*
    * Scenario: Check the hunting forecast
-   * Given an Accuweather home page without hunting as an interest tab
+   * Given an AccuWeather home page without hunting as an interest tab
    * When the user attempts to add a hunting tab
    * Then the hunting tab should be added to interests
    * And the user should be able to click it to navigate to the hunting forecast
@@ -98,12 +99,12 @@ public class OutdoorEnthusiastTests  {
         //Click on the hunting button
         driver.findElement(By.cssSelector("a[href*='hunting-weather']")).click();
         //Assert that we are at the hunting forecast page
-        assert(driver.getTitle().contains("Hunting Weather"));
+        assertTrue(driver.getTitle().contains("Hunting Weather"));
   }
   
   /*
    * Scenario: Check the fishing forecast
-   * Given an Accuweather home page without fishing as an interest tab
+   * Given an AccuWeather home page without fishing as an interest tab
    * When the user attempts to add a fishing tab
    * Then the fishing tab should be added to interests
    * And the user should be able to click it to navigate to the fishing forecast
@@ -121,12 +122,12 @@ public class OutdoorEnthusiastTests  {
         //Click on the fishing button
         driver.findElement(By.cssSelector("a[href*='fishing-weather']")).click();
         //Assert that we are at the fishing forecast page
-        assert(driver.getTitle().contains("Fishing Weather"));
+        assertTrue(driver.getTitle().contains("Fishing Weather"));
   }
   
   /*
    * Scenario: Check the running forecast
-   * Given an Accuweather home page without running as an interest tab
+   * Given an AccuWeather home page without running as an interest tab
    * When the user attempts to add a running tab
    * Then the running tab should be added to interests
    * And the user should be able to click it to navigate to the running forecast
@@ -144,12 +145,12 @@ public class OutdoorEnthusiastTests  {
         //Click on the running button
         driver.findElement(By.cssSelector("a[href*='running-weather']")).click();
         //Assert that we are at the running forecast page
-        assert(driver.getTitle().contains("Running Weather"));
+        assertTrue(driver.getTitle().contains("Running Weather"));
   }
   
   /*
    * Scenario: Check the hiking forecast
-   * Given an Accuweather home page without hiking as an interest tab
+   * Given an AccuWeather home page without hiking as an interest tab
    * When the user attempts to add a hiking tab
    * Then the hiking tab should be added to interests
    * And the user should be able to click it to navigate to the hiking forecast
@@ -167,12 +168,12 @@ public class OutdoorEnthusiastTests  {
         //Click on the hiking button
         driver.findElement(By.cssSelector("a[href*='hiking-weather']")).click();
         //Assert that we are at the hiking forecast page
-        assert(driver.getTitle().contains("Hiking Weather"));
+        assertTrue(driver.getTitle().contains("Hiking Weather"));
   }
   
   /*
    * Scenario: Check the biking forecast
-   * Given an Accuweather home page without biking as an interest tab
+   * Given an AccuWeather home page without biking as an interest tab
    * When the user attempts to add a biking tab
    * Then the biking tab should be added to interests
    * And the user should be able to click it to navigate to the biking forecast
@@ -190,12 +191,12 @@ public class OutdoorEnthusiastTests  {
         //Click on the biking button
         driver.findElement(By.cssSelector("a[href*='biking-weather']")).click();
         //Assert that we are at the biking forecast page
-        assert(driver.getTitle().contains("Biking Weather"));
+        assertTrue(driver.getTitle().contains("Biking Weather"));
   }
   
   /*
    * Scenario: Check the beach and pool forecast
-   * Given an Accuweather home page without sun and sand as an interest tab
+   * Given an AccuWeather home page without sun and sand as an interest tab
    * When the user attempts to add a sun and san tab
    * Then the sun and sand tab should be added to interests
    * And the user should be able to click it to navigate to the sun and sand forecast
@@ -213,12 +214,12 @@ public class OutdoorEnthusiastTests  {
         //Click on the sun and sand button
         driver.findElement(By.cssSelector("a[href*='sun-sand-weather']")).click();
         //Assert that we are at the beach forecast page
-        assert(driver.getTitle().contains("Sun and Sand Weather"));
+        assertTrue(driver.getTitle().contains("Sun and Sand Weather"));
   }
   
   /*
    * Scenario: Check the sailing forecast
-   * Given an Accuweather home page without sailing as an interest tab
+   * Given an AccuWeather home page without sailing as an interest tab
    * When the user attempts to add a sailing tab
    * Then the sailing tab should be added to interests
    * And the user should be able to click it to navigate to the sailing forecast
@@ -236,7 +237,7 @@ public class OutdoorEnthusiastTests  {
         //Click on the sailing button
         driver.findElement(By.cssSelector("a[href*='sailing-weather']")).click();
         //Assert that we are at the sailing forecast page
-        assert(driver.getTitle().contains("Sailing Weather"));
+        assertTrue(driver.getTitle().contains("Sailing Weather"));
   }
  
 }
