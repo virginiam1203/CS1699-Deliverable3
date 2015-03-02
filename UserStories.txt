@@ -1,0 +1,46 @@
+As a traveller
+I want to check the weather in multiple cities
+so that I can pack accordingly
+
+*Given a user whose location is in North America
+*When the user clicks on the "North America" link
+*Then the North America Weather page will load
+
+Given a user whose location is in the world
+When the user clicks on the "World" link
+Then the World Weather page will load
+
+When a user types a city name into the search bar and clicks go
+Then a page with a list of cities will load
+
+When a user accesses a location page
+Then the page will have  weekend, extended, month, radar, and MinuteCast tabs
+(has a test for each)
+
+Given a user using Fahrenheit temperatures
+When a user selects Celsius
+Then the temperatures will convert to Celsius
+
+
+As a Pittsburgh resident
+I want to check the weather for the week
+so that I can emotionally prepare myself
+
+When a user checks the hourly weather
+Then the website will display a temperature and RealFeel temperature for each hour
+
+When a user checks the extended weather
+The website will provide an textual indicator of weather conditions
+
+Given that it is winter time (unknown what the website displays in other seasons)
+When a user checks the hourly weather
+Then the website will provide amounts of Rain, Snow, and Ice
+
+When a user access the monthly weather
+Then the website will provide Historical Averages for each day
+
+When a user accesses the Pittsburgh weather page
+Then the website will contain a video forecast, radar, storm news, and regional weather reports 
+
+When a user access the weekend weather
+Then the website will provide events and attractions
