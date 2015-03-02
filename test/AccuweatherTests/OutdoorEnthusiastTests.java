@@ -5,8 +5,10 @@
  */
 
 /**
- * @author Ginger
+ * @author Ginger Mulky
  */
+
+package AccuweatherTests;
 
 import java.util.concurrent.TimeUnit;
 import org.junit.*;
@@ -15,7 +17,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 
 public class OutdoorEnthusiastTests  {
+ 
   private WebDriver driver;
+  
   @Before
   public void setUp() throws Exception {
     driver = new FirefoxDriver();
@@ -23,10 +27,14 @@ public class OutdoorEnthusiastTests  {
     driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
   }
 
-
+  @After
+  public void tearDown() throws Exception {
+    driver.quit();
+  }
+  
   /*
    * Scenario: Check the golf forecast
-   * Given an accuweather home page without golf as an interest tab
+   * Given an Accuweather home page without golf as an interest tab
    * When the user attempts to add a golf tab
    * Then the golf tab should be added to interests
    * And the user should be able to click it to navigate to the golf forecast
@@ -49,7 +57,7 @@ public class OutdoorEnthusiastTests  {
   
   /*
    * Scenario: Check the ski forecast
-   * Given an accuweather home page without ski as an interest tab
+   * Given an Accuweather home page without ski as an interest tab
    * When the user attempts to add a ski tab
    * Then the ski tab should be added to interests
    * And the user should be able to click it to navigate to the ski forecast
@@ -72,7 +80,7 @@ public class OutdoorEnthusiastTests  {
   
   /*
    * Scenario: Check the hunting forecast
-   * Given an accuweather home page without hunting as an interest tab
+   * Given an Accuweather home page without hunting as an interest tab
    * When the user attempts to add a hunting tab
    * Then the hunting tab should be added to interests
    * And the user should be able to click it to navigate to the hunting forecast
@@ -95,7 +103,7 @@ public class OutdoorEnthusiastTests  {
   
   /*
    * Scenario: Check the fishing forecast
-   * Given an accuweather home page without fishing as an interest tab
+   * Given an Accuweather home page without fishing as an interest tab
    * When the user attempts to add a fishing tab
    * Then the fishing tab should be added to interests
    * And the user should be able to click it to navigate to the fishing forecast
@@ -118,7 +126,7 @@ public class OutdoorEnthusiastTests  {
   
   /*
    * Scenario: Check the running forecast
-   * Given an accuweather home page without running as an interest tab
+   * Given an Accuweather home page without running as an interest tab
    * When the user attempts to add a running tab
    * Then the running tab should be added to interests
    * And the user should be able to click it to navigate to the running forecast
@@ -141,7 +149,7 @@ public class OutdoorEnthusiastTests  {
   
   /*
    * Scenario: Check the hiking forecast
-   * Given an accuweather home page without hiking as an interest tab
+   * Given an Accuweather home page without hiking as an interest tab
    * When the user attempts to add a hiking tab
    * Then the hiking tab should be added to interests
    * And the user should be able to click it to navigate to the hiking forecast
@@ -164,7 +172,7 @@ public class OutdoorEnthusiastTests  {
   
   /*
    * Scenario: Check the biking forecast
-   * Given an accuweather home page without biking as an interest tab
+   * Given an Accuweather home page without biking as an interest tab
    * When the user attempts to add a biking tab
    * Then the biking tab should be added to interests
    * And the user should be able to click it to navigate to the biking forecast
@@ -187,7 +195,7 @@ public class OutdoorEnthusiastTests  {
   
   /*
    * Scenario: Check the beach and pool forecast
-   * Given an accuweather home page without sun and sand as an interest tab
+   * Given an Accuweather home page without sun and sand as an interest tab
    * When the user attempts to add a sun and san tab
    * Then the sun and sand tab should be added to interests
    * And the user should be able to click it to navigate to the sun and sand forecast
@@ -210,7 +218,7 @@ public class OutdoorEnthusiastTests  {
   
   /*
    * Scenario: Check the sailing forecast
-   * Given an accuweather home page without sailing as an interest tab
+   * Given an Accuweather home page without sailing as an interest tab
    * When the user attempts to add a sailing tab
    * Then the sailing tab should be added to interests
    * And the user should be able to click it to navigate to the sailing forecast
@@ -230,9 +238,5 @@ public class OutdoorEnthusiastTests  {
         //Assert that we are at the sailing forecast page
         assert(driver.getTitle().contains("Sailing Weather"));
   }
-  
-  @After
-  public void tearDown() throws Exception {
-    driver.quit();
-    }
-  }
+ 
+}
