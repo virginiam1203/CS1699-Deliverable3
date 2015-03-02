@@ -2,9 +2,9 @@ As a traveller
 I want to check the weather in multiple cities
 so that I can pack accordingly
 
-Given a user whose location is in North America
-When the user clicks on the "North America" link
-Then the North America Weather page will load
+*Given a user whose location is in North America
+*When the user clicks on the "North America" link
+*Then the North America Weather page will load
 
 Given a user whose location is in the world
 When the user clicks on the "World" link
@@ -17,9 +17,9 @@ When a user accesses a location page
 Then the page will have  weekend, extended, month, radar, and MinuteCast tabs
 (has a test for each)
 
-Given a user using Farenheit temperatures
+Given a user using Fahrenheit temperatures
 When a user selects Celsius
-Then the temperatures will convert to celsius
+Then the temperatures will convert to Celsius
 
 
 As a Pittsburgh resident
