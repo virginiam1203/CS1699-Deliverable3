@@ -1,6 +1,6 @@
 /*
  * CS1699 Deliverable 3
- * Shelley Goldberg and Virginia Mulky
+ * Shelley Goldberg and Ginger Mulky
  */
 
 import static org.junit.Assert.*;
@@ -25,9 +25,9 @@ public class PittsburghResidentTest {
 	private WebDriver driver;
 	  @Before
 	  public void setUp() throws Exception {
-	    driver = new FirefoxDriver();
-	    //wait 60 seconds for elements to appear/pages to load
-	    driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		driver = new FirefoxDriver();
+		//wait 60 seconds for elements to appear/pages to load
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 	  }
 
 	@After
@@ -132,33 +132,33 @@ public class PittsburghResidentTest {
 	//Test that there is a Video Weather link on the main Pittsburgh page
 	  @Test
 	  public void VideoTest() throws Exception{
-		  driver.get("http://www.accuweather.com/en/us/pittsburgh-pa/15219/weather-forecast/1310");
-		  WebElement content = driver.findElement(By.id("feature-video"));
-	      assertTrue(content.getText().contains("Video Weather Forecast"));
+		driver.get("http://www.accuweather.com/en/us/pittsburgh-pa/15219/weather-forecast/1310");
+		WebElement content = driver.findElement(By.id("feature-video"));
+		assertTrue(content.getText().contains("Video Weather Forecast"));
 	  }
 	  
 	//Test that there is a Radar link on the main Pittsburgh page
 	  @Test
 	  public void Radar() throws Exception{
-		  driver.get("http://www.accuweather.com/en/us/pittsburgh-pa/15219/weather-forecast/1310");
-		  WebElement content = driver.findElement(By.id("feature-radar"));
-	      assertTrue(content.getText().contains("Pittsburgh Radar"));
+		driver.get("http://www.accuweather.com/en/us/pittsburgh-pa/15219/weather-forecast/1310");
+		WebElement content = driver.findElement(By.id("feature-radar"));
+		assertTrue(content.getText().contains("Pittsburgh Radar"));
 	  }
 	//Test that there is a News story on the main Pittsburgh page
 	  @Test
 	  public void News() throws Exception{
-		  driver.get("http://www.accuweather.com/en/us/pittsburgh-pa/15219/weather-forecast/1310");
-		  WebElement content = driver.findElement(By.id("article"));
-	      assertTrue(content.getText().contains("Pittsburgh"));
-	      //The news story will change between tests, but is likely to contain the word "Pittsburgh"
-	      //alternatively, I would assert that the element exists. 
+		driver.get("http://www.accuweather.com/en/us/pittsburgh-pa/15219/weather-forecast/1310");
+		WebElement content = driver.findElement(By.id("article"));
+		assertTrue(content.getText().contains("Pittsburgh"));
+		//The news story will change between tests, but is likely to contain the word "Pittsburgh"
+		//alternatively, I would assert that the element exists. 
 	  }
 	//Test that there is a Regional News section on the main Pittsburgh page
 	  @Test
 	  public void Regional() throws Exception{
-		  driver.get("http://www.accuweather.com/en/us/pittsburgh-pa/15219/weather-forecast/1310");
-		  WebElement content = driver.findElement(By.id("news"));
-	      assertTrue(content.getText().contains("Pittsburgh Weather Reports"));
+		driver.get("http://www.accuweather.com/en/us/pittsburgh-pa/15219/weather-forecast/1310");
+		WebElement content = driver.findElement(By.id("news"));
+		assertTrue(content.getText().contains("Pittsburgh Weather Reports"));
 	  }
 	
 	/*
