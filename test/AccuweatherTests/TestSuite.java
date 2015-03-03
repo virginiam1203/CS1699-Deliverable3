@@ -6,6 +6,6 @@ import org.junit.runners.Suite.SuiteClasses;
 @RunWith(Suite.class)
 @SuiteClasses({ OutdoorEnthusiastTests.class, PittsburghResidentTest.class,
 		SocialMediaTests.class, TravelerTest.class })
-public class AccuweatherTests {
+public class TestSuite {
 
 }
