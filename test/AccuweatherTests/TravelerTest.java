@@ -1,6 +1,6 @@
 /*
  * CS1699 Deliverable 3
- * Shelley Goldberg and Virginia Mulky
+ * Shelley Goldberg and Ginger Mulky
  */
 
 import static org.junit.Assert.*;
